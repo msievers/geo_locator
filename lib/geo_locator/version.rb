@@ -1,3 +1,3 @@
-module GeoLocator
-  VERSION = "0.0.1"
+class GeoLocator
+  VERSION = "0.0.2"
 end
