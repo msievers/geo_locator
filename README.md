@@ -1,6 +1,6 @@
 # GeoLocator
 
-TODO: Write a gem description
+A gem which packages a offline database to geocode zip codes and locations without the need for an external web service.
 
 ## Installation
 
@@ -18,7 +18,13 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+$ irb
+2.1.0 :001 > require "geo_locator"
+ => true
+2.1.0 :002 > GeoLocator.locate(zip_code: 12681)
+ => [{:lat=>52.5392572203694, :lon=>13.5398499484887}]
+```
 
 ## Contributing
 
