@@ -35,6 +35,7 @@ class GeoLocator
   end
 
   def self.locate(options = {})
+    self.new.locate(options)
   end
 
   def initialize(options = {})

@@ -11,6 +11,10 @@ describe GeoLocator do
     it "is a class level proxy for the class method _locate without the need for instantiation" do
       expect(GeoLocator).to respond_to(:locate)
     end
+
+    it "returns a array of geo locations if a zip_code is given" do
+      expect(GeoLocator.locate(zip_code: 33100)).to eq([{:lat=>51.7240488542403, :lon=>8.82975311690181}])
+    end
   end
 
   describe ".new" do
@@ -23,6 +27,10 @@ describe GeoLocator do
     describe "#locate" do
       it "is an instance level proxy for the class method _locate" do
         expect(geo_locator).to respond_to(:locate)
+      end
+
+      it "returns a array of geo locations if a zip_code is given" do
+        expect(GeoLocator.locate(zip_code: 33100)).to eq([{:lat=>51.7240488542403, :lon=>8.82975311690181}])
       end
     end
   end
@@ -39,7 +47,6 @@ describe GeoLocator do
     end
 
     it "expects a sqlite3 database named geo_locator.sqlite3 in the gems root dir" do
-      #true # expect(File.exist?(File.expand_path("../geo_locator.sqlite3", File.dirname(__FILE__)))).to eq(true)
     end
 
     it "needs to be called with a database connection" do
