@@ -4,7 +4,11 @@ require "rspec/core/rake_task"
 RSpec::Core::RakeTask.new(:spec)
 
 task :default => :spec
-task :release => :create_database # ensure that there is a database before releasing
+task :release => :check_database # ensure that there is a database before releasing
+
+task :check_database do
+  raise "Database does not exist!" unless File.exist?(File.expand_path("geo_locator.sqlite3", File.dirname(__FILE__)))
+end
 
 task :create_database do
   require "sqlite3"
