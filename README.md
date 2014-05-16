@@ -22,8 +22,19 @@ Or install it yourself as:
 $ irb
 2.1.0 :001 > require "geo_locator"
  => true
-2.1.0 :002 > GeoLocator.locate(zip_code: 12681)
- => [{:lat=>52.5392572203694, :lon=>13.5398499484887}]
+2.1.0 :002 > GeoLocator.locate(zip_code: 10115)
+ => [{:lat=>52.5337069545604, :lon=>13.387223860255}]
+```
+
+You can use the `format` option to specify, how the coordinates should be returned. This is useful for example for elasticsearch. Supported values are `:array`, `:hash`, `:string`.
+
+```ruby
+2.1.0 :003 > GeoLocator.locate(zip_code: 10115, format: :array)
+ => [[13.387223860255, 52.5337069545604]]
+2.1.0 :004 > GeoLocator.locate(zip_code: 10115, format: :hash)
+ => [{:lat=>52.5337069545604, :lon=>13.387223860255}]
+2.1.0 :005 > GeoLocator.locate(zip_code: 10115, format: :string)
+ => ["52.5337069545604,13.387223860255"]
 ```
 
 ## Contributing
