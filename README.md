@@ -37,6 +37,14 @@ You can use the `format` option to specify, how the coordinates should be return
  => ["52.5337069545604,13.387223860255"]
 ```
 
+### Instantiating GeoLocator
+
+`GeoLocator` provides a class level `locate` method. Due to it's stateless nature, it cannot reuse internal database connections or cache requested coordinates. If you want this kind of optimizations, create an instance of `GeoLocator`, which provides a `locate` method with the same semantic as the class level method.
+
+Actually, the class level `locate` creates a new instance of `GeoLocator` and calls `locate` on it, internally.
+
+
+
 ## Contributing
 
 1. Fork it ( http://github.com/<my-github-username>/geo_locator/fork )
