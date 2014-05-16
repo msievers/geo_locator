@@ -43,6 +43,11 @@ You can use the `format` option to specify, how the coordinates should be return
 
 Actually, the class level `locate` creates a new instance of `GeoLocator` and calls `locate` on it, internally.
 
+## Limitations
+
+* only locations in Germany are supported
+* retrival of geo locations is only possible based on zip codes or city names
+
 ## Contributing
 
 1. Fork it ( http://github.com/<my-github-username>/geo_locator/fork )
