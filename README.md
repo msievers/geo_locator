@@ -1,4 +1,4 @@
-# GeoLocator
+# GeoLocator [![Dependency Status](https://gemnasium.com/msievers/geo_locator.svg)](https://gemnasium.com/msievers/geo_locator)
 
 A gem which packages a offline database to geocode zip codes and locations without the need for an external web service.
 
