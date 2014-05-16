@@ -43,8 +43,6 @@ You can use the `format` option to specify, how the coordinates should be return
 
 Actually, the class level `locate` creates a new instance of `GeoLocator` and calls `locate` on it, internally.
 
-
-
 ## Contributing
 
 1. Fork it ( http://github.com/<my-github-username>/geo_locator/fork )
@@ -52,3 +50,7 @@ Actually, the class level `locate` creates a new instance of `GeoLocator` and ca
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+## Credits
+
+This gem is based on data provided by OpenGeoDB (http://www.opengeodb.org).
